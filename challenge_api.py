@@ -159,17 +159,6 @@ def create_database_file(data):
               )
 
 
-# create result dataframe
-def create_dataframe_file(data):
-    if not os.path.exists("result"):
-        os.makedirs("result")
-
-    df = pd.DataFrame(data={"text": data})
-    df.to_csv("result/data_text_result.csv", sep=',', index=False)
-
-    return data
-
-
 # ROUTE
 # text processing
 @swag_from("docs/text_processing.yml", methods=['POST'])
