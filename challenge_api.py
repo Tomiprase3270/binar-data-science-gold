@@ -216,7 +216,6 @@ def text_processing_file():
 
     # call the function to create database and dataframe
     create_database_file(cleaned_text)
-    create_dataframe_file(cleaned_text)
 
     response_data = jsonify(json_response)
     return response_data
